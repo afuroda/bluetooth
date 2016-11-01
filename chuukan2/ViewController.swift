@@ -70,7 +70,9 @@ class ViewController: UIViewController,MCSessionDelegate,MCNearbyServiceBrowserD
         self.presentViewController(alert, animated: true, completion: nil)
     }
     func session(session: MCSession, peer peerID: MCPeerID, didChangeState state: MCSessionState) {
-        print("[MCSessionDelegate] session:peerID:didChangeState:")
+        let viewcontroller = self.storyboard!.instantiateViewControllerWithIdentifier("view2") 
+        self.presentViewController(viewcontroller,animated: true, completion: nil)
+        print("change window")
         
     }
     func session(session: MCSession, didReceiveData data: NSData, fromPeer peerID: MCPeerID) {

@@ -14,6 +14,7 @@
 		D01F79E41DBCE7A7007D8A68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D01F79E21DBCE7A7007D8A68 /* LaunchScreen.storyboard */; };
 		D01F79EF1DBCE7A8007D8A68 /* chuukan2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01F79EE1DBCE7A8007D8A68 /* chuukan2Tests.swift */; };
 		D01F79FA1DBCE7A8007D8A68 /* chuukan2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01F79F91DBCE7A8007D8A68 /* chuukan2UITests.swift */; };
+		D067A0971DC929F400FD876C /* secondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D067A0961DC929F400FD876C /* secondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		D01F79F51DBCE7A8007D8A68 /* chuukan2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = chuukan2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D01F79F91DBCE7A8007D8A68 /* chuukan2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chuukan2UITests.swift; sourceTree = "<group>"; };
 		D01F79FB1DBCE7A8007D8A68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D067A0961DC929F400FD876C /* secondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = secondViewController.swift; path = ../secondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				D01F79D91DBCE7A7007D8A68 /* AppDelegate.swift */,
+				D067A0961DC929F400FD876C /* secondViewController.swift */,
 				D01F79DB1DBCE7A7007D8A68 /* ViewController.swift */,
 				D01F79DD1DBCE7A7007D8A68 /* Main.storyboard */,
 				D01F79E01DBCE7A7007D8A68 /* Assets.xcassets */,
@@ -258,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D01F79DC1DBCE7A7007D8A68 /* ViewController.swift in Sources */,
+				D067A0971DC929F400FD876C /* secondViewController.swift in Sources */,
 				D01F79DA1DBCE7A7007D8A68 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -489,6 +493,7 @@
 				D01F7A001DBCE7A8007D8A68 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D01F7A011DBCE7A8007D8A68 /* Build configuration list for PBXNativeTarget "chuukan2Tests" */ = {
 			isa = XCConfigurationList;
@@ -497,6 +502,7 @@
 				D01F7A031DBCE7A8007D8A68 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D01F7A041DBCE7A8007D8A68 /* Build configuration list for PBXNativeTarget "chuukan2UITests" */ = {
 			isa = XCConfigurationList;
@@ -505,6 +511,7 @@
 				D01F7A061DBCE7A8007D8A68 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
