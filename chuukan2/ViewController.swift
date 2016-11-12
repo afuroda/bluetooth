@@ -11,15 +11,15 @@ import MultipeerConnectivity
 class ViewController: UIViewController,MCSessionDelegate,MCNearbyServiceBrowserDelegate,MCNearbyServiceAdvertiserDelegate {
     
     let peer : MCPeerID = MCPeerID(displayName: UIDevice.currentDevice().name)
-    var session : MCSession?
+    
     var browser : MCNearbyServiceBrowser?
     var advertis : MCNearbyServiceAdvertiser?
     let service = "p2p"
-    
+    var appdelegate = UIApplication.sharedApplication().delegate as! AppDelegate
 
     override func viewDidLoad() {
-        self.session = MCSession(peer: peer)
-        self.session!.delegate = self
+        appdelegate.session = MCSession(peer: peer)
+        appdelegate.session!.delegate = self
         self.browser = MCNearbyServiceBrowser(peer: peer, serviceType: service)
         self.browser!.delegate = self
         self.advertis = MCNearbyServiceAdvertiser(peer: peer, discoveryInfo: nil, serviceType: service)
@@ -45,7 +45,7 @@ class ViewController: UIViewController,MCSessionDelegate,MCNearbyServiceBrowserD
         print("[MCNearbyServiceBrowserDelegate] browser:foundPeer:withDiscoveryInfo:")
         print("  + peerID = \(peerID.displayName)")
         print("  + info = \(info)")
-        browser.invitePeer(peerID, toSession: self.session!, withContext: nil, timeout: 10)
+        browser.invitePeer(peerID, toSession: appdelegate.session!, withContext: nil, timeout: 10)
     }
     
     func browser(browser: MCNearbyServiceBrowser, lostPeer peerID: MCPeerID) {
@@ -62,21 +62,22 @@ class ViewController: UIViewController,MCSessionDelegate,MCNearbyServiceBrowserD
         
         let alert = UIAlertController(title: "招待を受けました", message: "from \(peerID.displayName)", preferredStyle: .Alert)
         alert.addAction(UIAlertAction(title: "参加", style: .Default) { action in
-            invitationHandler(true, self.session!)
+            invitationHandler(true, self.appdelegate.session!)
             })
         alert.addAction(UIAlertAction(title: "拒否", style: .Cancel) { action in
-            invitationHandler(false, self.session!)
+            invitationHandler(false, self.appdelegate.session!)
             })
         self.presentViewController(alert, animated: true, completion: nil)
     }
     func session(session: MCSession, peer peerID: MCPeerID, didChangeState state: MCSessionState) {
-        let viewcontroller = self.storyboard!.instantiateViewControllerWithIdentifier("view2") 
-        self.presentViewController(viewcontroller,animated: true, completion: nil)
+        //画面遷移のコード
+        let viewcontroller = self.storyboard!.instantiateViewControllerWithIdentifier("view2")
+        self.presentViewController(viewcontroller,animated: true,completion: nil)
         print("change window")
         
     }
     func session(session: MCSession, didReceiveData data: NSData, fromPeer peerID: MCPeerID) {
-        print("[MCSessionDelegate] session:didReceiveData:fromPeer:")
+        print("receivedData")
     }
     
     func session(session: MCSession, didReceiveStream stream: NSInputStream, withName streamName: String, fromPeer peerID: MCPeerID) {

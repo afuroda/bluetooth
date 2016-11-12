@@ -7,9 +7,11 @@
 //
 
 import UIKit
-
+import MultipeerConnectivity
 class secondViewController: UIViewController {
 
+    let appdelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,12 +22,26 @@ class secondViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    //view1に戻る
     @IBAction func Modori(sender: AnyObject) {
         let viewcontroller = self.storyboard!.instantiateViewControllerWithIdentifier("view1")
         self.presentViewController(viewcontroller,animated: true, completion: nil)
     }
 
+    @IBAction func send(sender: AnyObject) {
+        let str = "text"
+        let data = (str as NSString).dataUsingEncoding(NSUTF8StringEncoding)
+        do{
+            try appdelegate.session?.sendData(data!, toPeers: (appdelegate.session?.connectedPeers)!, withMode: .Reliable)
+        }catch let error as NSError{
+            print("sned error")
+        }
+       
+    
+    }
+    func session(session: MCSession, didReceiveData data: NSData, fromPeer peerID: MCPeerID) {
+        print("received Data")
+    }
     /*
     // MARK: - Navigation
 

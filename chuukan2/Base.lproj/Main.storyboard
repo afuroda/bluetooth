@@ -70,9 +70,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jwx-h7-bU7">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jwx-h7-bU7">
                                 <rect key="frame" x="126" y="298" width="122" height="72"/>
                                 <color key="backgroundColor" red="0.84125973762752493" green="0.73498236315659082" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="122" id="NP6-Tb-uaE"/>
+                                    <constraint firstAttribute="height" constant="72" id="oXy-mN-6fa"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <state key="normal" title="戻る">
                                     <color key="titleColor" red="0.3850374917752265" green="1" blue="0.49526889185399214" alpha="1" colorSpace="calibratedRGB"/>
@@ -81,8 +85,21 @@
                                     <action selector="Modori:" destination="5jy-pc-cMd" eventType="touchUpInside" id="BQ9-zR-EiG"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N3X-w5-vgU">
+                                <rect key="frame" x="126" y="447" width="122" height="89"/>
+                                <color key="backgroundColor" red="0.74799254320847086" green="0.18675376177082914" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                <state key="normal" title="送信"/>
+                                <connections>
+                                    <action selector="send:" destination="5jy-pc-cMd" eventType="touchUpInside" id="e8f-eI-X5o"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Jwx-h7-bU7" firstAttribute="centerY" secondItem="VXo-JI-yjm" secondAttribute="centerY" id="b3S-vj-wVk"/>
+                            <constraint firstItem="Jwx-h7-bU7" firstAttribute="centerX" secondItem="VXo-JI-yjm" secondAttribute="centerX" id="pY0-zK-3dK"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
