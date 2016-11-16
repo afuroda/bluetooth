@@ -32,6 +32,7 @@ class secondViewController: UIViewController,MCSessionDelegate {
 
     @IBAction func send(sender: AnyObject) {
         let image = UIImage(named: "o.png")
+        //UIImageのo.pngをNSDataに変換するコード
         let data = UIImagePNGRepresentation(image!)
         do{
             try appdelegate.session?.sendData(data!, toPeers: (appdelegate.session?.connectedPeers)!, withMode: .Reliable)
@@ -46,6 +47,8 @@ class secondViewController: UIViewController,MCSessionDelegate {
         
     }
     func session(session: MCSession, didReceiveData data: NSData, fromPeer peerID: MCPeerID) {
+        let sendimage = UIImage(named: "o.png")
+        imageview.image = sendimage
         print("recived data")
 
     }
