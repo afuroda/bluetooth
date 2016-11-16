@@ -15,6 +15,7 @@
 		D01F79EF1DBCE7A8007D8A68 /* chuukan2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01F79EE1DBCE7A8007D8A68 /* chuukan2Tests.swift */; };
 		D01F79FA1DBCE7A8007D8A68 /* chuukan2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01F79F91DBCE7A8007D8A68 /* chuukan2UITests.swift */; };
 		D067A0971DC929F400FD876C /* secondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D067A0961DC929F400FD876C /* secondViewController.swift */; };
+		D067A11B1DD8C9E300FD876C /* o.png in Resources */ = {isa = PBXBuildFile; fileRef = D067A11A1DD8C9E300FD876C /* o.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		D01F79F91DBCE7A8007D8A68 /* chuukan2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chuukan2UITests.swift; sourceTree = "<group>"; };
 		D01F79FB1DBCE7A8007D8A68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D067A0961DC929F400FD876C /* secondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = secondViewController.swift; path = ../secondViewController.swift; sourceTree = "<group>"; };
+		D067A11A1DD8C9E300FD876C /* o.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = o.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				D01F79DB1DBCE7A7007D8A68 /* ViewController.swift */,
 				D01F79DD1DBCE7A7007D8A68 /* Main.storyboard */,
 				D01F79E01DBCE7A7007D8A68 /* Assets.xcassets */,
+				D067A11A1DD8C9E300FD876C /* o.png */,
 				D01F79E21DBCE7A7007D8A68 /* LaunchScreen.storyboard */,
 				D01F79E51DBCE7A7007D8A68 /* Info.plist */,
 			);
@@ -236,6 +239,7 @@
 				D01F79E41DBCE7A7007D8A68 /* LaunchScreen.storyboard in Resources */,
 				D01F79E11DBCE7A7007D8A68 /* Assets.xcassets in Resources */,
 				D01F79DF1DBCE7A7007D8A68 /* Main.storyboard in Resources */,
+				D067A11B1DD8C9E300FD876C /* o.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

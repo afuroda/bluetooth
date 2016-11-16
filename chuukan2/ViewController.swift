@@ -19,7 +19,7 @@ class ViewController: UIViewController,MCSessionDelegate,MCNearbyServiceBrowserD
 
     override func viewDidLoad() {
         appdelegate.session = MCSession(peer: peer)
-        appdelegate.session!.delegate = self
+        appdelegate.session?.delegate = self
         self.browser = MCNearbyServiceBrowser(peer: peer, serviceType: service)
         self.browser!.delegate = self
         self.advertis = MCNearbyServiceAdvertiser(peer: peer, discoveryInfo: nil, serviceType: service)

@@ -8,11 +8,13 @@
 
 import UIKit
 import MultipeerConnectivity
-class secondViewController: UIViewController {
+class secondViewController: UIViewController,MCSessionDelegate {
 
+    @IBOutlet weak var imageview: UIImageView!
     let appdelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     
     override func viewDidLoad() {
+        appdelegate.session?.delegate = self
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
@@ -29,19 +31,34 @@ class secondViewController: UIViewController {
     }
 
     @IBAction func send(sender: AnyObject) {
-        let str = "text"
-        let data = (str as NSString).dataUsingEncoding(NSUTF8StringEncoding)
+        let image = UIImage(named: "o.png")
+        let data = UIImagePNGRepresentation(image!)
         do{
             try appdelegate.session?.sendData(data!, toPeers: (appdelegate.session?.connectedPeers)!, withMode: .Reliable)
+            print("send data")
         }catch let error as NSError{
             print("sned error")
         }
        
     
     }
-    func session(session: MCSession, didReceiveData data: NSData, fromPeer peerID: MCPeerID) {
-        print("received Data")
+    func session(session: MCSession, peer peerID: MCPeerID, didChangeState state: MCSessionState) {
+        
     }
+    func session(session: MCSession, didReceiveData data: NSData, fromPeer peerID: MCPeerID) {
+        print("recived data")
+
+    }
+    
+    func session(session: MCSession, didReceiveStream stream: NSInputStream, withName streamName: String, fromPeer peerID: MCPeerID) {
+    }
+    
+    func session(session: MCSession, didStartReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, withProgress progress: NSProgress) {
+    }
+    
+    func session(session: MCSession, didFinishReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, atURL localURL: NSURL, withError error: NSError?) {
+    }
+    
     /*
     // MARK: - Navigation
 

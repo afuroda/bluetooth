@@ -13,7 +13,7 @@ class AppDelegate: UIResponder,UIApplicationDelegate {
 
     var window: UIWindow?
     var session : MCSession?
-    
+    var data : NSData?
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
