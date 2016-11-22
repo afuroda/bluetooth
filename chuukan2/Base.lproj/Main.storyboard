@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
@@ -69,52 +68,9 @@
                     <view key="view" contentMode="scaleToFill" id="VXo-JI-yjm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jwx-h7-bU7">
-                                <rect key="frame" x="126" y="298" width="122" height="72"/>
-                                <color key="backgroundColor" red="0.84125973762752493" green="0.73498236315659082" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="122" id="NP6-Tb-uaE"/>
-                                    <constraint firstAttribute="height" constant="72" id="oXy-mN-6fa"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <state key="normal" title="戻る">
-                                    <color key="titleColor" red="0.3850374917752265" green="1" blue="0.49526889185399214" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="Modori:" destination="5jy-pc-cMd" eventType="touchUpInside" id="BQ9-zR-EiG"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N3X-w5-vgU">
-                                <rect key="frame" x="126" y="447" width="122" height="89"/>
-                                <color key="backgroundColor" red="0.74799254320847086" green="0.18675376177082914" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="122" id="RrF-Zu-N0f"/>
-                                    <constraint firstAttribute="height" constant="89" id="x1B-GO-Ruj"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
-                                <state key="normal" title="送信"/>
-                                <connections>
-                                    <action selector="send:" destination="5jy-pc-cMd" eventType="touchUpInside" id="e8f-eI-X5o"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0da-Wa-v2y">
-                                <rect key="frame" x="67" y="80" width="240" height="128"/>
-                                <color key="backgroundColor" red="0.81686391753934029" green="0.40642135889218123" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </imageView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="N3X-w5-vgU" firstAttribute="centerX" secondItem="VXo-JI-yjm" secondAttribute="centerX" id="aDW-eq-UiZ"/>
-                            <constraint firstItem="Jwx-h7-bU7" firstAttribute="centerY" secondItem="VXo-JI-yjm" secondAttribute="centerY" id="b3S-vj-wVk"/>
-                            <constraint firstItem="Jwx-h7-bU7" firstAttribute="centerX" secondItem="VXo-JI-yjm" secondAttribute="centerX" id="pY0-zK-3dK"/>
-                            <constraint firstItem="N3X-w5-vgU" firstAttribute="centerY" secondItem="VXo-JI-yjm" secondAttribute="centerY" constant="158" id="tkb-5x-y89"/>
-                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <connections>
-                        <outlet property="imageview" destination="0da-Wa-v2y" id="AgO-62-Jl4"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DHb-Gj-1XJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
